@@ -17,6 +17,11 @@ public class Health : MonoBehaviour
 		}
 	}
 
+	public void AddHealth(int amount)
+	{
+		health += amount;
+	}
+
 	public int GetHealth()
 	{
 		return health;
