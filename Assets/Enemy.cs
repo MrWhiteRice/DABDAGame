@@ -24,8 +24,6 @@ public class Enemy : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		print("fuck");
-
 		if(collision.transform.CompareTag("Player"))
 		{
 			collision.transform.GetComponent<Health>().AddHealth(-10);

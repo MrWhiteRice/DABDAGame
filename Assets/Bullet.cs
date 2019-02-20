@@ -14,7 +14,12 @@ public class Bullet : MonoBehaviour
 		rb.velocity = transform.right * speed;
 	}
 
-	private void Update()
+	void OnCollisionEnter2D(Collision2D collision)
 	{
+		if(collision.transform.CompareTag("Enemy"))
+		{
+			Destroy(gameObject);
+			Destroy(collision.gameObject);
+		}
 	}
 }
