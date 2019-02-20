@@ -4,11 +4,6 @@ public class Health : MonoBehaviour
 {
 	int health = 100;
 
-	void Start()
-	{
-
-	}
-
 	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.F))
