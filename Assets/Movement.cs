@@ -16,7 +16,8 @@ public class Movement : MonoBehaviour
 	void Update()
 	{
 		GetInput();
-		
+		CheckRelease();
+
 		rb.velocity = moveDir.normalized * moveSpeed;
 	}
 
@@ -39,7 +40,10 @@ public class Movement : MonoBehaviour
 		{
 			moveDir.x = 1;
 		}
+	}
 
+	void CheckRelease()
+	{
 		if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
 		{
 			moveDir.x = 0;
